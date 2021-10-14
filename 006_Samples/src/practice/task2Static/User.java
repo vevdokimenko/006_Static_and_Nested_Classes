@@ -4,9 +4,12 @@ public class User {
     private static String login;
     private static String password;
 
-    static  {
-        login = "Login";
-        password = "Password";
+    public static void setLogin(String login) {
+        User.login = login;
+    }
+
+    public static void setPassword(String password) {
+        User.password = password;
     }
 
     void createQuery() {
@@ -25,6 +28,8 @@ public class User {
 
     public static void main(String[] args) {
         User user = new User();
+        User.setLogin("User");
+        User.setPassword("Password");
 
         Query query = new Query();
         query.printToLog();
